@@ -1,51 +1,48 @@
 #include <stdio.h>
 
-// Constantes para número de movimentos
-#define BISPO_MOVIMENTOS 5
+// Definição de constantes para o número de movimentos de cada peça
 #define TORRE_MOVIMENTOS 5
+#define BISPO_MOVIMENTOS 5
 #define RAINHA_MOVIMENTOS 8
 
 int main() {
-    // ========================
-    // Movimentação do BISPO
-    // ========================
-    // Bispo move 5 vezes na diagonal superior direita (Cima + Direita)
-    // Usando estrutura de repetição: for
-
-    printf("Movimentação do BISPO (Diagonal Superior Direita):\n");
-    for (int i = 0; i < BISPO_MOVIMENTOS; i++) {
-        printf("Cima\n");
+    // ====================================
+    // Movimentação da TORRE (usando while)
+    // ====================================
+    // A torre se move 5 casas para a direita
+    printf("Movimentação da TORRE:\n");
+    
+    int i = 0;
+    while (i < TORRE_MOVIMENTOS) {
         printf("Direita\n");
+        i++;
     }
-    printf("------------------------------\n");
 
-    // ========================
-    // Movimentação da TORRE
-    // ========================
-    // Torre move 5 casas para a direita
-    // Usando estrutura de repetição: while
+    printf("-----------------------------\n");
 
-    printf("Movimentação da TORRE (Direita):\n");
-    int t = 0;
-    while (t < TORRE_MOVIMENTOS) {
-        printf("Direita\n");
-        t++;
+    // ==========================================
+    // Movimentação do BISPO (usando estrutura for)
+    // ==========================================
+    // O bispo se move na diagonal: Cima + Direita
+    printf("Movimentação do BISPO:\n");
+
+    for (int j = 0; j < BISPO_MOVIMENTOS; j++) {
+        printf("Cima Direita\n");
     }
-    printf("------------------------------\n");
 
-    // ========================
-    // Movimentação da RAINHA
-    // ========================
-    // Rainha move 8 casas para a esquerda
-    // Usando estrutura de repetição: do...while
+    printf("-----------------------------\n");
 
-    printf("Movimentação da RAINHA (Esquerda):\n");
-    int r = 0;
+    // =============================================
+    // Movimentação da RAINHA (usando do-while loop)
+    // =============================================
+    // A rainha se move 8 casas para a esquerda
+    printf("Movimentação da RAINHA:\n");
+
+    int k = 0;
     do {
         printf("Esquerda\n");
-        r++;
-    } while (r < RAINHA_MOVIMENTOS);
-    printf("------------------------------\n");
+        k++;
+    } while (k < RAINHA_MOVIMENTOS);
 
     return 0;
 }
