@@ -1,48 +1,42 @@
 #include <stdio.h>
 
-// Definição de constantes para o número de movimentos de cada peça
-#define TORRE_MOVIMENTOS 5
-#define BISPO_MOVIMENTOS 5
-#define RAINHA_MOVIMENTOS 8
-
 int main() {
-    // ====================================
-    // Movimentação da TORRE (usando while)
-    // ====================================
-    // A torre se move 5 casas para a direita
-    printf("Movimentação da TORRE:\n");
-    
-    int i = 0;
-    while (i < TORRE_MOVIMENTOS) {
+    // Movimento da Torre (5 casas para a direita)
+    printf("Movimento da Torre:\n");
+    for (int i = 1; i <= 5; i++) {
         printf("Direita\n");
-        i++;
     }
+    printf("\n");
 
-    printf("-----------------------------\n");
-
-    // ==========================================
-    // Movimentação do BISPO (usando estrutura for)
-    // ==========================================
-    // O bispo se move na diagonal: Cima + Direita
-    printf("Movimentação do BISPO:\n");
-
-    for (int j = 0; j < BISPO_MOVIMENTOS; j++) {
+    // Movimento do Bispo (5 casas na diagonal para cima e à direita)
+    printf("Movimento do Bispo:\n");
+    int j = 1;
+    while (j <= 5) {
         printf("Cima Direita\n");
+        j++;
     }
+    printf("\n");
 
-    printf("-----------------------------\n");
-
-    // =============================================
-    // Movimentação da RAINHA (usando do-while loop)
-    // =============================================
-    // A rainha se move 8 casas para a esquerda
-    printf("Movimentação da RAINHA:\n");
-
-    int k = 0;
+    // Movimento da Rainha (8 casas para a esquerda)
+    printf("Movimento da Rainha:\n");
+    int k = 1;
     do {
         printf("Esquerda\n");
         k++;
-    } while (k < RAINHA_MOVIMENTOS);
+    } while (k <= 8);
+    printf("\n");
+
+    // Movimento do Cavalo (duas casas para baixo e uma para a esquerda)
+    printf("Movimento do Cavalo:\n");
+    for (int i = 1; i <= 2; i++) {
+        printf("Baixo\n");
+    }
+    int j1 = 1;
+    while (j1 <= 1) {
+        printf("Esquerda\n");
+        j1++;
+    }
+    printf("\n");
 
     return 0;
 }
